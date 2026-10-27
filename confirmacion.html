@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- PASO 1: el navegador usa el ancho real del dispositivo. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="titulo-confirmacion">Gracias | StockVital</title>
+  <meta name="description" content="StockVital conecta bodegas con productos próximos a vencer con compradores que buscan ahorro real en su barrio.">
+  <!-- PASO 2: tipografía redondeada de los wireframes y hoja de estilos compartida. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/svg+xml" href="iconos/favicon.svg">
+</head>
+<body>
+<a class="saltar" href="#contenido" data-i18n="saltar">Saltar al contenido</a>
+
+<!-- PASO 3: header fijo con menú horizontal, desplegable y cambio de idioma. -->
+<header class="cabecera">
+  <div class="contenedor barra">
+    <a class="marca" href="index.html"><img src="iconos/logo.svg" alt="" width="40" height="40"><span>StockVital<small data-i18n="lema">Menos merma, más ahorro</small></span></a>
+    <nav aria-label="Navegación principal" data-i18n-aria="nav-principal">
+      <ul class="menu">
+        <li><a href="index.html#inicio" data-i18n="menu-inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros" data-i18n="menu-nosotros">Nosotros</a></li>
+        <li>
+          <!-- details abre el submenú con clic, Enter o toque. -->
+          <details class="desplegable">
+            <summary data-i18n="menu-soluciones">Soluciones</summary>
+            <ul class="submenu">
+              <li><a href="index.html#compradores" data-i18n="menu-compradores">Para compradores</a></li>
+              <li><a href="index.html#bodegueros" data-i18n="menu-bodegueros">Para bodegueros</a></li>
+              <li><a href="index.html#simulador" data-i18n="menu-simulador">Simulador de descuentos</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="index.html#como-funciona" data-i18n="menu-como">Cómo funciona</a></li>
+        <li><a href="index.html#preguntas" data-i18n="menu-preguntas">Preguntas</a></li>
+        <li><a href="index.html#contacto" data-i18n="menu-contacto">Contacto</a></li>
+        <!-- JavaScript cambia los textos entre español e inglés (i18n). -->
+        <li><button type="button" class="boton-idioma" data-cambiar-idioma aria-label="Change language to English">EN</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="seccion">
+  <!-- Página fija de confirmación: no recibe ni muestra los datos del formulario. -->
+  <section class="contenedor pagina-simple" aria-labelledby="confirmado">
+    <div class="tarjeta-confirmacion">
+      <p class="etiqueta" data-i18n="conf-etiqueta">Mensaje recibido (demostración)</p>
+      <h1 id="confirmado" data-i18n="conf-titulo">¡Gracias por tu interés en StockVital!</h1>
+      <p data-i18n="conf-texto">Así se vería la confirmación al unirte a la lista de espera.</p>
+      <div class="aviso" role="note">
+        <h2 data-i18n="conf-aviso-t">Esto es una simulación</h2>
+        <p data-i18n="conf-aviso">Esta página es fija: se muestra igual para cualquier persona que complete el formulario. No se almacenó ningún dato ni se envió ningún correo.</p>
+      </div>
+      <h2 data-i18n="conf-sig-t">¿Qué pasaría en un servicio real?</h2>
+      <ol>
+        <li data-i18n="conf-sig-1">Agregaríamos tu correo a la lista de espera.</li>
+        <li data-i18n="conf-sig-2">Te avisaríamos cuando StockVital esté disponible en tu zona.</li>
+      </ol>
+      <div class="acciones">
+        <a class="boton" href="index.html" data-i18n="conf-volver">Volver al inicio</a>
+        <a class="boton boton-naranja" href="index.html#simulador" data-i18n="conf-sim">Probar el simulador</a>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- PASO FINAL: pie compartido por las páginas del sitio. -->
+<footer class="pie">
+  <div class="contenedor pie-columnas">
+    <div>
+      <p class="pie-marca"><img src="iconos/logo.svg" alt="" width="32" height="32"> StockVital</p>
+      <p data-i18n="pie-texto">Un producto de BodegaTech. Menos merma, más ahorro.</p>
+    </div>
+    <div>
+      <p class="pie-titulo" data-i18n="pie-enlaces">Enlaces</p>
+      <ul class="pie-lista">
+        <li><a href="terminos.html" data-i18n="pie-terminos">Términos y condiciones</a></li>
+        <li><a href="terminos.html#privacidad" data-i18n="pie-privacidad">Política de privacidad</a></li>
+        <li><a href="index.html#contacto" data-i18n="menu-contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pie-titulo" data-i18n="pie-redes">Síguenos</p>
+      <nav class="redes" aria-label="Redes sociales">
+        <!-- Páginas generales; reemplazar por las cuentas del proyecto. -->
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" alt="" width="22" height="22">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/instagram.svg" alt="" width="22" height="22">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/youtube.svg" alt="" width="22" height="22">YouTube</a>
+      </nav>
+    </div>
+  </div>
+  <p class="contenedor pie-copy" data-i18n="pie-copy">© 2026 BodegaTech · Proyecto académico del curso Diseño y Patrones de Software (UPC).</p>
+</footer>
+
+<script src="js/idioma.js"></script>
+</body>
+</html>

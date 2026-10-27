@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- PASO 1: el navegador usa el ancho real del dispositivo. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="titulo-terminos">Términos y privacidad | StockVital</title>
+  <meta name="description" content="StockVital conecta bodegas con productos próximos a vencer con compradores que buscan ahorro real en su barrio.">
+  <!-- PASO 2: tipografía redondeada de los wireframes y hoja de estilos compartida. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/svg+xml" href="iconos/favicon.svg">
+</head>
+<body>
+<a class="saltar" href="#contenido" data-i18n="saltar">Saltar al contenido</a>
+
+<!-- PASO 3: header fijo con menú horizontal, desplegable y cambio de idioma. -->
+<header class="cabecera">
+  <div class="contenedor barra">
+    <a class="marca" href="index.html"><img src="iconos/logo.svg" alt="" width="40" height="40"><span>StockVital<small data-i18n="lema">Menos merma, más ahorro</small></span></a>
+    <nav aria-label="Navegación principal" data-i18n-aria="nav-principal">
+      <ul class="menu">
+        <li><a href="index.html#inicio" data-i18n="menu-inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros" data-i18n="menu-nosotros">Nosotros</a></li>
+        <li>
+          <!-- details abre el submenú con clic, Enter o toque. -->
+          <details class="desplegable">
+            <summary data-i18n="menu-soluciones">Soluciones</summary>
+            <ul class="submenu">
+              <li><a href="index.html#compradores" data-i18n="menu-compradores">Para compradores</a></li>
+              <li><a href="index.html#bodegueros" data-i18n="menu-bodegueros">Para bodegueros</a></li>
+              <li><a href="index.html#simulador" data-i18n="menu-simulador">Simulador de descuentos</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="index.html#como-funciona" data-i18n="menu-como">Cómo funciona</a></li>
+        <li><a href="index.html#preguntas" data-i18n="menu-preguntas">Preguntas</a></li>
+        <li><a href="index.html#contacto" data-i18n="menu-contacto">Contacto</a></li>
+        <!-- JavaScript cambia los textos entre español e inglés (i18n). -->
+        <li><button type="button" class="boton-idioma" data-cambiar-idioma aria-label="Change language to English">EN</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido" class="seccion">
+  <article class="contenedor pagina-simple legal">
+    <p class="etiqueta" data-i18n="ter-etiqueta">Legal</p>
+    <h1 data-i18n="ter-titulo">Términos y condiciones</h1>
+    <p data-i18n="ter-intro">Estos términos describen el uso de StockVital, un producto de BodegaTech. Es un prototipo académico redactado siguiendo el Código de Ética de Ingeniería de Software de ACM/IEEE.</p>
+    <h2 data-i18n="ter-1-t">1. Uso del servicio</h2>
+    <p data-i18n="ter-1">StockVital conecta bodegas de barrio con compradores. Cada bodeguero es responsable de la información que publica sobre sus productos, incluidos precios, stock y fechas de vencimiento.</p>
+    <h2 data-i18n="ter-2-t">2. Reservas y pagos</h2>
+    <p data-i18n="ter-2">Los pagos se procesan mediante una pasarela de pago certificada; StockVital no almacena datos de tarjetas. La política de no reembolso por reservas no recogidas se muestra antes de confirmar el pago.</p>
+    <h2 data-i18n="ter-3-t">3. Calidad de los productos</h2>
+    <p data-i18n="ter-3">Los productos se ofrecen antes de su fecha de vencimiento. Cada bodeguero debe garantizar que estén en buen estado al momento del recojo.</p>
+    <h2 id="privacidad" data-i18n="ter-priv-t">Política de privacidad</h2>
+    <p data-i18n="ter-priv">De acuerdo con la Ley N.° 29733 de Protección de Datos Personales, StockVital solicitará tu consentimiento explícito antes de usar tu ubicación y tus datos de contacto, y solo los usará para mostrarte ofertas cercanas y gestionar tus reservas.</p>
+    <p class="nota" data-i18n="ter-nota">Documento elaborado con fines académicos.</p>
+    <p><a class="boton" href="index.html" data-i18n="conf-volver">Volver al inicio</a></p>
+  </article>
+</main>
+<!-- PASO FINAL: pie compartido por las páginas del sitio. -->
+<footer class="pie">
+  <div class="contenedor pie-columnas">
+    <div>
+      <p class="pie-marca"><img src="iconos/logo.svg" alt="" width="32" height="32"> StockVital</p>
+      <p data-i18n="pie-texto">Un producto de BodegaTech. Menos merma, más ahorro.</p>
+    </div>
+    <div>
+      <p class="pie-titulo" data-i18n="pie-enlaces">Enlaces</p>
+      <ul class="pie-lista">
+        <li><a href="terminos.html" data-i18n="pie-terminos">Términos y condiciones</a></li>
+        <li><a href="terminos.html#privacidad" data-i18n="pie-privacidad">Política de privacidad</a></li>
+        <li><a href="index.html#contacto" data-i18n="menu-contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pie-titulo" data-i18n="pie-redes">Síguenos</p>
+      <nav class="redes" aria-label="Redes sociales">
+        <!-- Páginas generales; reemplazar por las cuentas del proyecto. -->
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" alt="" width="22" height="22">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/instagram.svg" alt="" width="22" height="22">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/youtube.svg" alt="" width="22" height="22">YouTube</a>
+      </nav>
+    </div>
+  </div>
+  <p class="contenedor pie-copy" data-i18n="pie-copy">© 2026 BodegaTech · Proyecto académico del curso Diseño y Patrones de Software (UPC).</p>
+</footer>
+
+<script src="js/idioma.js"></script>
+</body>
+</html>

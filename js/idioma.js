@@ -1,0 +1,246 @@
+/* =========================================================
+   StockVital · Cambio de idioma (i18n) ES / EN
+   - El español está escrito directamente en el HTML.
+   - Este archivo solo guarda las traducciones al inglés.
+   - Patrón Observer: otros scripts (como el simulador) se
+     suscriben para enterarse cuando cambia el idioma.
+   ========================================================= */
+
+const Idioma = (function () {
+  // Textos en inglés. La clave coincide con el atributo data-i18n del HTML.
+  const ingles = {
+    'titulo-inicio': 'StockVital | Less waste, more savings',
+    'titulo-confirmacion': 'Thank you | StockVital',
+    'titulo-terminos': 'Terms and privacy | StockVital',
+    'saltar': 'Skip to content',
+    'lema': 'Less waste, more savings',
+    'nav-principal': 'Main navigation',
+    'menu-inicio': 'Home',
+    'menu-nosotros': 'About us',
+    'menu-soluciones': 'Solutions',
+    'menu-compradores': 'For shoppers',
+    'menu-bodegueros': 'For store owners',
+    'menu-simulador': 'Discount simulator',
+    'menu-como': 'How it works',
+    'menu-preguntas': 'FAQ',
+    'menu-contacto': 'Contact',
+
+    'hero-etiqueta': 'Neighborhood stores · Products close to expiry',
+    'hero-titulo': 'Fresh products at a better price',
+    'hero-texto': 'We connect neighborhood stores that have products close to expiry with shoppers looking for real savings nearby.',
+    'hero-boton-comprador': 'I am a shopper',
+    'hero-boton-bodeguero': 'I am a store owner',
+    'alt-app-inicio': 'StockVital home screen with the options I am a shopper and I am a store owner',
+    'stat-bodegas': 'Active stores',
+    'stat-merma': 'Waste avoided per month',
+    'stat-compradores': 'Shoppers',
+
+    'nos-etiqueta': 'About us · BodegaTech',
+    'nos-titulo': 'Every expired product is money the store loses.',
+    'nos-p1': 'Neighborhood stores (bodegas) are one of the most important businesses in Peru, but many lose money on products that are close to their expiry date or sell slowly. At the same time, many families are looking for ways to save on their daily shopping.',
+    'nos-p2': 'At BodegaTech we created StockVital, an app that connects both: the store owner publishes products at a discount and the shopper finds them close to home.',
+    'nos-mision-t': 'Our mission',
+    'nos-mision': 'To reduce waste in neighborhood stores through batch control and automatic discounts based on expiry dates.',
+    'nos-vision-t': 'Our vision',
+    'nos-vision': 'A world where no product in good condition goes to waste and every family can save in its own neighborhood.',
+    'nos-dato': 'neighborhood stores fail in their first year, according to the Peruvian Association of Store Owners (cited in Juárez et al., 2023).',
+
+    'comp-etiqueta': 'I am a shopper',
+    'comp-titulo': 'Find deals near you and save.',
+    'comp-texto': 'Save on everyday essentials by shopping at the stores in your neighborhood.',
+    'comp-b1-t': 'Map of nearby deals',
+    'comp-b1': 'See the stores with active deals around you on a map.',
+    'comp-b2-t': 'Filters that fit you',
+    'comp-b2': 'Search by category, price, discount or distance.',
+    'comp-b3-t': 'Reserve and pay in the app',
+    'comp-b3': 'Pay by card, Yape or Plin and get a pickup code.',
+    'comp-b4-t': 'Alerts and total savings',
+    'comp-b4': 'Get deal notifications and check how much you have saved.',
+    'chip-gps': 'Nearby GPS',
+    'chip-40': 'Up to 40% OFF',
+    'chip-alertas': 'Alerts',
+    'alt-ofertas': 'Deal explorer with category filters and discounted products',
+    'alt-mapa': 'Shopper home screen with a map of nearby stores',
+
+    'bod-etiqueta': 'I am a store owner',
+    'bod-titulo': 'Manage your batches and reduce waste.',
+    'bod-texto': 'Register your products with their expiry date and let StockVital apply the discounts for you.',
+    'bod-b1-t': 'Batch management',
+    'bod-b1': 'Register perishable products, update stock or remove batches.',
+    'bod-b2-t': 'Automatic discounts',
+    'bod-b2': 'The system calculates the discount based on the days left until expiry. You set the ranges.',
+    'bod-b3-t': 'QR code validation',
+    'bod-b3': 'Confirm each in-store sale with the shopper’s pickup code.',
+    'bod-b4-t': 'Sales and waste reports',
+    'bod-b4': 'See how much you sold at a discount and how much waste you avoided.',
+    'chip-lotes': 'Batch management',
+    'chip-auto': 'Auto-discounts',
+    'chip-reportes': 'Reports',
+    'alt-lotes': 'Batch management with stock, discounted price and expiry date',
+    'alt-reglas': 'Discount rules for high, medium and low risk',
+
+    'como-etiqueta': 'How it works',
+    'como-titulo': 'From waste to savings in four steps.',
+    'paso1-t': 'The store owner registers a batch',
+    'paso1': 'They enter the product, the stock and the expiry date.',
+    'paso2-t': 'StockVital applies the discount',
+    'paso2': 'The price drops automatically based on the days left until expiry.',
+    'paso3-t': 'The shopper reserves and pays',
+    'paso3': 'They find the deal on the map, reserve it and pay by card, Yape or Plin.',
+    'paso4-t': 'Pick up at the store',
+    'paso4': 'They show their pickup code and the store owner validates the sale.',
+
+    'sim-etiqueta': 'Try it here',
+    'sim-titulo': 'How much of a discount would your product get?',
+    'sim-texto': 'Enter the price and the days left until expiry. The simulator applies StockVital’s default discount rules.',
+    'reglas-caption': 'Default discount rules',
+    'reglas-nivel': 'Level',
+    'reglas-dias': 'Days to expiry',
+    'reglas-desc': 'Discount',
+    'riesgo-alto': 'High risk',
+    'riesgo-medio': 'Medium risk',
+    'riesgo-bajo': 'Low risk',
+    'sim-precio': 'Original price (S/)',
+    'sim-dias': 'Days to expiry',
+    'sim-nota': 'Illustrative simulation. In the app, each store owner can customize their ranges and percentages.',
+
+    'faq-etiqueta': 'Frequently asked questions',
+    'faq-titulo': 'We answer your questions.',
+    'faq-1-p': 'How is a product\u2019s discount calculated?',
+    'faq-1-r': 'Based on the days left until expiry. By default: 1 to 3 days, 40%; 4 to 7 days, 25%; and 8 to 14 days, 15%. Each store owner can customize these ranges and percentages.',
+    'faq-2-p': 'Are the products in good condition?',
+    'faq-2-r': 'Yes. They are published before their expiry date, and each store owner is responsible for keeping them in good condition until pickup.',
+    'faq-3-p': 'How do I pay for my reservation?',
+    'faq-3-r': 'In the app, by credit or debit card, Yape or Plin. Once the payment is confirmed, you get a receipt and a pickup code.',
+    'faq-4-p': 'What happens if I don\u2019t pick up my product on time?',
+    'faq-4-r': 'Since these products are close to expiry, there is no refund if you don\u2019t pick them up within the time limit. This policy is shown before you confirm the payment, and the app reminds you before the store closes.',
+    'faq-5-p': 'Can I cancel a reservation?',
+    'faq-5-r': 'Yes, while the reservation is still active and before it expires. The product becomes available again for other shoppers.',
+    'faq-6-p': 'Why does the app ask for my location?',
+    'faq-6-r': 'To show you nearby stores with deals and calculate the route. It is only used with your consent, in accordance with Peruvian Personal Data Protection Law No. 29733.',
+    'cta-titulo': 'Less waste for your store. More savings for your family.',
+    'cta-texto': 'StockVital is coming soon to the App Store and Google Play. Join the waiting list and be one of the first to use it.',
+    'cta-boton': 'I want to join',
+
+    'test-etiqueta': 'Testimonials',
+    'test-titulo': 'What our users are looking for.',
+    'test-1': '“I used to throw away milk that expired. Now I sell it at a discount before that happens.”',
+    'test-1-autor': 'Store owner, North Lima',
+    'test-2': '“I check the map before going out and buy the same things, but cheaper, two blocks from home.”',
+    'test-2-autor': 'Mother',
+    'test-3': '“I don’t have to calculate every price. The app applies the discount based on the days left.”',
+    'test-3-autor': 'Minimarket owner',
+    'test-nota': 'Illustrative testimonials based on the needs identified in our interviews.',
+
+    'con-etiqueta': 'Contact',
+    'con-titulo': 'Join StockVital.',
+    'con-texto': 'Do you own a store and want to reduce waste? Do you want to save in your neighborhood? Leave us your details and we will let you know when the app is available.',
+    'con-nota': 'Academic prototype: the form does not save or send real data.',
+    'f-nombre': 'Name',
+    'f-nombre-ph': 'Example: Rosa',
+    'f-correo': 'Email',
+    'f-perfil': 'I am interested as a',
+    'f-perfil-0': 'Select an option',
+    'f-perfil-1': 'Store owner',
+    'f-perfil-2': 'Shopper',
+    'f-mensaje': 'Message',
+    'f-mensaje-ph': 'Tell us about your store or what you are looking for',
+    'f-acepto': 'I accept the',
+    'f-terminos': 'terms and privacy policy',
+    'f-enviar': 'Send',
+
+    'pie-texto': 'A BodegaTech product. Less waste, more savings.',
+    'pie-enlaces': 'Links',
+    'pie-terminos': 'Terms and conditions',
+    'pie-privacidad': 'Privacy policy',
+    'pie-redes': 'Follow us',
+    'pie-copy': '© 2026 BodegaTech · Academic project for the Software Design and Patterns course (UPC).',
+
+    'conf-etiqueta': 'Message received (demo)',
+    'conf-titulo': 'Thank you for your interest in StockVital!',
+    'conf-texto': 'This is what the confirmation would look like after joining the waiting list.',
+    'conf-aviso-t': 'This is a simulation',
+    'conf-aviso': 'This page is fixed: it looks the same for everyone who fills in the form. No data was stored and no email was sent.',
+    'conf-sig-t': 'What would happen in a real service?',
+    'conf-sig-1': 'We would add your email to the waiting list.',
+    'conf-sig-2': 'We would let you know when StockVital is available in your area.',
+    'conf-volver': 'Back to home',
+    'conf-sim': 'Try the simulator',
+
+    'ter-etiqueta': 'Legal',
+    'ter-titulo': 'Terms and conditions',
+    'ter-intro': 'These terms describe how StockVital, a BodegaTech product, should be used. This is an academic prototype written following the ACM/IEEE Software Engineering Code of Ethics.',
+    'ter-1-t': '1. Use of the service',
+    'ter-1': 'StockVital connects neighborhood stores with shoppers. Store owners are responsible for the information they publish about their products, including prices, stock and expiry dates.',
+    'ter-2-t': '2. Reservations and payments',
+    'ter-2': 'Payments are processed through a certified payment gateway; StockVital does not store card data. The no-refund policy for uncollected reservations is shown before confirming the payment.',
+    'ter-3-t': '3. Product quality',
+    'ter-3': 'Products are offered before their expiry date. Each store owner must guarantee that the products are in good condition at the time of pickup.',
+    'ter-priv-t': 'Privacy policy',
+    'ter-priv': 'In accordance with Peruvian Personal Data Protection Law No. 29733, StockVital will request explicit consent before using your location and contact details, and will only use them to show nearby deals and manage your reservations.',
+    'ter-nota': 'Document prepared for academic purposes.'
+  };
+
+  const CLAVE = 'stockvital-idioma';
+  const suscriptores = [];
+  const originales = new Map();
+  let actual = 'es';
+
+  // Guarda el texto original en español la primera vez, para poder volver a él.
+  function guardarOriginal(el, tipo, valor) {
+    if (!originales.has(el)) originales.set(el, {});
+    const datos = originales.get(el);
+    if (!(tipo in datos)) datos[tipo] = valor;
+  }
+
+  // Devuelve el texto en inglés si existe; si no, el original en español.
+  function texto(el, tipo, clave, valorActual) {
+    guardarOriginal(el, tipo, valorActual);
+    if (actual === 'en' && ingles[clave]) return ingles[clave];
+    return originales.get(el)[tipo];
+  }
+
+  function aplicar() {
+    document.documentElement.lang = actual === 'en' ? 'en' : 'es';
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      el.innerHTML = texto(el, 'html', el.dataset.i18n, el.innerHTML);
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(function (el) {
+      el.placeholder = texto(el, 'ph', el.dataset.i18nPh, el.placeholder);
+    });
+    document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+      el.alt = texto(el, 'alt', el.dataset.i18nAlt, el.alt);
+    });
+    document.querySelectorAll('[data-i18n-aria]').forEach(function (el) {
+      el.setAttribute('aria-label', texto(el, 'aria', el.dataset.i18nAria, el.getAttribute('aria-label')));
+    });
+    // El botón muestra el idioma al que se puede cambiar.
+    document.querySelectorAll('[data-cambiar-idioma]').forEach(function (boton) {
+      boton.textContent = actual === 'en' ? 'ES' : 'EN';
+      boton.setAttribute('aria-label', actual === 'en' ? 'Cambiar idioma a español' : 'Change language to English');
+    });
+    // Observer: avisa a los suscriptores que el idioma cambió.
+    suscriptores.forEach(function (fn) { fn(actual); });
+  }
+
+  function cambiar(nuevo) {
+    actual = nuevo === 'en' ? 'en' : 'es';
+    try { localStorage.setItem(CLAVE, actual); } catch (e) { /* sin almacenamiento: no pasa nada */ }
+    aplicar();
+  }
+
+  function suscribir(fn) { suscriptores.push(fn); }
+  function obtener() { return actual; }
+
+  // Al cargar la página: recupera el idioma elegido antes y conecta el botón.
+  document.addEventListener('DOMContentLoaded', function () {
+    let guardado = 'es';
+    try { guardado = localStorage.getItem(CLAVE) || 'es'; } catch (e) { guardado = 'es'; }
+    document.querySelectorAll('[data-cambiar-idioma]').forEach(function (boton) {
+      boton.addEventListener('click', function () { cambiar(actual === 'es' ? 'en' : 'es'); });
+    });
+    cambiar(guardado);
+  });
+
+  return { cambiar: cambiar, suscribir: suscribir, obtener: obtener };
+})();

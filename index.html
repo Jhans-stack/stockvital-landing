@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!-- PASO 1: el navegador usa el ancho real del dispositivo. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="titulo-inicio">StockVital | Menos merma, más ahorro</title>
+  <meta name="description" content="StockVital conecta bodegas con productos próximos a vencer con compradores que buscan ahorro real en su barrio.">
+  <!-- PASO 2: tipografía redondeada de los wireframes y hoja de estilos compartida. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="icon" type="image/svg+xml" href="iconos/favicon.svg">
+</head>
+<body>
+<a class="saltar" href="#contenido" data-i18n="saltar">Saltar al contenido</a>
+
+<!-- PASO 3: header fijo con menú horizontal, desplegable y cambio de idioma. -->
+<header class="cabecera">
+  <div class="contenedor barra">
+    <a class="marca" href="index.html"><img src="iconos/logo.svg" alt="" width="40" height="40"><span>StockVital<small data-i18n="lema">Menos merma, más ahorro</small></span></a>
+    <nav aria-label="Navegación principal" data-i18n-aria="nav-principal">
+      <ul class="menu">
+        <li><a href="index.html#inicio" data-i18n="menu-inicio">Inicio</a></li>
+        <li><a href="index.html#nosotros" data-i18n="menu-nosotros">Nosotros</a></li>
+        <li>
+          <!-- details abre el submenú con clic, Enter o toque. -->
+          <details class="desplegable">
+            <summary data-i18n="menu-soluciones">Soluciones</summary>
+            <ul class="submenu">
+              <li><a href="index.html#compradores" data-i18n="menu-compradores">Para compradores</a></li>
+              <li><a href="index.html#bodegueros" data-i18n="menu-bodegueros">Para bodegueros</a></li>
+              <li><a href="index.html#simulador" data-i18n="menu-simulador">Simulador de descuentos</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a href="index.html#como-funciona" data-i18n="menu-como">Cómo funciona</a></li>
+        <li><a href="index.html#preguntas" data-i18n="menu-preguntas">Preguntas</a></li>
+        <li><a href="index.html#contacto" data-i18n="menu-contacto">Contacto</a></li>
+        <!-- JavaScript cambia los textos entre español e inglés (i18n). -->
+        <li><button type="button" class="boton-idioma" data-cambiar-idioma aria-label="Change language to English">EN</button></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido">
+
+  <!-- PASO 4: hero con texto e imagen en dos columnas. -->
+  <section id="inicio" class="hero">
+    <div class="contenedor dos-columnas">
+      <div>
+        <p class="etiqueta etiqueta-clara" data-i18n="hero-etiqueta">Bodegas de barrio · Productos próximos a vencer</p>
+        <h1 data-i18n="hero-titulo">Productos frescos a mejor precio</h1>
+        <p class="hero-texto" data-i18n="hero-texto">Conectamos bodegas con productos próximos a vencer con compradores que buscan ahorro real en su barrio.</p>
+        <div class="acciones">
+          <a class="boton boton-blanco" href="#compradores" data-i18n="hero-boton-comprador">Soy comprador</a>
+          <a class="boton boton-naranja" href="#bodegueros" data-i18n="hero-boton-bodeguero">Soy bodeguero</a>
+        </div>
+      </div>
+      <figure class="telefono telefono-hero">
+        <img src="imagenes/app-inicio.png" alt="Pantalla de inicio de StockVital con las opciones Soy comprador y Soy bodeguero" width="406" height="834" data-i18n-alt="alt-app-inicio">
+      </figure>
+    </div>
+    <!-- Franja de estadísticas del wireframe de inicio. -->
+    <ul class="estadisticas contenedor" aria-label="Cifras de StockVital">
+      <li><strong data-contador="240" data-sufijo="+">240+</strong><span data-i18n="stat-bodegas">Bodegas activas</span></li>
+      <li><strong data-contador="18" data-prefijo="S/" data-sufijo="K">S/18K</strong><span data-i18n="stat-merma">Merma evitada al mes</span></li>
+      <li><strong data-contador="3200" data-sufijo="+">3,200+</strong><span data-i18n="stat-compradores">Compradores</span></li>
+    </ul>
+  </section>
+
+  <!-- PASO 5: quiénes somos y el problema que atendemos. -->
+  <section id="nosotros" class="seccion">
+    <div class="contenedor dos-columnas">
+      <div>
+        <p class="etiqueta" data-i18n="nos-etiqueta">Quiénes somos · BodegaTech</p>
+        <h2 data-i18n="nos-titulo">Cada producto vencido es dinero que la bodega pierde.</h2>
+        <p data-i18n="nos-p1">Las bodegas son uno de los negocios más importantes del Perú, pero muchas pierden dinero por productos que se acercan a su fecha de vencimiento o rotan poco. Al mismo tiempo, muchas familias buscan cómo ahorrar en sus compras diarias.</p>
+        <p data-i18n="nos-p2">En BodegaTech creamos StockVital, una aplicación que une a ambos: el bodeguero publica sus productos con descuento y el comprador los encuentra cerca de su casa.</p>
+      </div>
+      <div class="tarjetas-mision">
+        <article class="tarjeta">
+          <h3 data-i18n="nos-mision-t">Nuestra misión</h3>
+          <p data-i18n="nos-mision">Reducir la merma en las bodegas de barrio mediante el control de lotes y descuentos automáticos por fecha de vencimiento.</p>
+        </article>
+        <article class="tarjeta">
+          <h3 data-i18n="nos-vision-t">Nuestra visión</h3>
+          <p data-i18n="nos-vision">Que ningún producto en buen estado se desperdicie y que cada familia pueda ahorrar en su propio barrio.</p>
+        </article>
+        <article class="tarjeta dato">
+          <strong>7 / 10</strong>
+          <p data-i18n="nos-dato">bodegas fracasan en su primer año de funcionamiento, según la Asociación de Bodegueros del Perú (citado en Juárez et al., 2023).</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASO 6: los dos perfiles del wireframe: comprador (verde) y bodeguero (naranja). -->
+  <section id="compradores" class="seccion fondo">
+    <div class="contenedor dos-columnas">
+      <div>
+        <p class="etiqueta" data-i18n="comp-etiqueta">Soy comprador</p>
+        <h2 data-i18n="comp-titulo">Encuentra ofertas cerca de ti y ahorra.</h2>
+        <p data-i18n="comp-texto">Ahorra en productos de primera necesidad comprando en las bodegas de tu barrio.</p>
+        <ul class="beneficios">
+          <li><strong data-i18n="comp-b1-t">Mapa de ofertas cercanas</strong><span data-i18n="comp-b1">Ubica en el mapa las bodegas con ofertas activas a tu alrededor.</span></li>
+          <li><strong data-i18n="comp-b2-t">Filtros a tu medida</strong><span data-i18n="comp-b2">Busca por categoría, precio, descuento o distancia.</span></li>
+          <li><strong data-i18n="comp-b3-t">Reserva y paga desde la app</strong><span data-i18n="comp-b3">Paga con tarjeta, Yape o Plin y recibe un código de recojo.</span></li>
+          <li><strong data-i18n="comp-b4-t">Alertas y ahorro acumulado</strong><span data-i18n="comp-b4">Recibe avisos de ofertas y revisa cuánto has ahorrado.</span></li>
+        </ul>
+        <ul class="chips chips-verde">
+          <li data-i18n="chip-gps">GPS cercano</li><li data-i18n="chip-40">Hasta 40% OFF</li><li data-i18n="chip-alertas">Alertas</li>
+        </ul>
+      </div>
+      <div class="pantallas">
+        <figure class="telefono"><img src="imagenes/consumidor-ofertas.png" alt="Explorador de ofertas con filtros por categoría y productos con descuento" width="251" height="521" loading="lazy" data-i18n-alt="alt-ofertas"></figure>
+        <figure class="telefono"><img src="imagenes/consumidor-mapa.png" alt="Inicio del comprador con el mapa de bodegas cercanas" width="227" height="466" loading="lazy" data-i18n-alt="alt-mapa"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="bodegueros" class="seccion bodeguero">
+    <div class="contenedor dos-columnas invertido">
+      <div class="pantallas">
+        <figure class="telefono"><img src="imagenes/bodeguero-lotes.png" alt="Gestión de lotes con stock, precio rebajado y fecha de vencimiento" width="217" height="438" loading="lazy" data-i18n-alt="alt-lotes"></figure>
+        <figure class="telefono"><img src="imagenes/bodeguero-descuentos.png" alt="Reglas de descuento por riesgo alto, medio y bajo" width="219" height="460" loading="lazy" data-i18n-alt="alt-reglas"></figure>
+      </div>
+      <div>
+        <p class="etiqueta etiqueta-naranja" data-i18n="bod-etiqueta">Soy bodeguero</p>
+        <h2 data-i18n="bod-titulo">Gestiona tus lotes y reduce tus mermas.</h2>
+        <p data-i18n="bod-texto">Registra tus productos con su fecha de vencimiento y deja que StockVital aplique los descuentos por ti.</p>
+        <ul class="beneficios beneficios-naranja">
+          <li><strong data-i18n="bod-b1-t">Gestión de lotes</strong><span data-i18n="bod-b1">Registra productos perecibles, actualiza el stock o da de baja lotes.</span></li>
+          <li><strong data-i18n="bod-b2-t">Descuentos automáticos</strong><span data-i18n="bod-b2">El sistema calcula la rebaja según los días que faltan para el vencimiento. Tú defines los rangos.</span></li>
+          <li><strong data-i18n="bod-b3-t">Validación con código QR</strong><span data-i18n="bod-b3">Confirma cada venta presencial con el código de recojo del comprador.</span></li>
+          <li><strong data-i18n="bod-b4-t">Reportes de ventas y mermas</strong><span data-i18n="bod-b4">Mira cuánto vendiste con descuento y cuánta merma evitaste.</span></li>
+        </ul>
+        <ul class="chips chips-naranja">
+          <li data-i18n="chip-lotes">Gestión de lotes</li><li data-i18n="chip-auto">Auto-descuentos</li><li data-i18n="chip-reportes">Reportes</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASO 7: recorrido completo en cuatro pasos (tarjetas en Grid). -->
+  <section id="como-funciona" class="seccion contenedor">
+    <p class="etiqueta" data-i18n="como-etiqueta">Cómo funciona</p>
+    <h2 data-i18n="como-titulo">De la merma al ahorro en cuatro pasos.</h2>
+    <ol class="pasos">
+      <li class="tarjeta"><span class="numero">01</span><h3 data-i18n="paso1-t">El bodeguero registra un lote</h3><p data-i18n="paso1">Ingresa el producto, el stock y la fecha de vencimiento.</p></li>
+      <li class="tarjeta"><span class="numero">02</span><h3 data-i18n="paso2-t">StockVital aplica el descuento</h3><p data-i18n="paso2">El precio baja automáticamente según los días que faltan para vencer.</p></li>
+      <li class="tarjeta"><span class="numero">03</span><h3 data-i18n="paso3-t">El comprador reserva y paga</h3><p data-i18n="paso3">Encuentra la oferta en el mapa, la reserva y paga con tarjeta, Yape o Plin.</p></li>
+      <li class="tarjeta"><span class="numero">04</span><h3 data-i18n="paso4-t">Recoge en la bodega</h3><p data-i18n="paso4">Muestra su código de recojo y el bodeguero valida la venta.</p></li>
+    </ol>
+  </section>
+
+  <!-- PASO 8: simulador. JavaScript calcula el descuento con las reglas del wireframe. -->
+  <section id="simulador" class="seccion fondo">
+    <div class="contenedor dos-columnas">
+      <div>
+        <p class="etiqueta" data-i18n="sim-etiqueta">Pruébalo aquí</p>
+        <h2 data-i18n="sim-titulo">¿Cuánto descuento tendría tu producto?</h2>
+        <p data-i18n="sim-texto">Ingresa el precio y los días que faltan para su vencimiento. El simulador aplica las reglas de descuento predeterminadas de StockVital.</p>
+        <table class="reglas">
+          <caption data-i18n="reglas-caption">Reglas de descuento predeterminadas</caption>
+          <thead><tr><th scope="col" data-i18n="reglas-nivel">Nivel</th><th scope="col" data-i18n="reglas-dias">Días para vencer</th><th scope="col" data-i18n="reglas-desc">Descuento</th></tr></thead>
+          <tbody>
+            <tr class="riesgo-alto"><td data-i18n="riesgo-alto">Riesgo alto</td><td>1 – 3</td><td>40%</td></tr>
+            <tr class="riesgo-medio"><td data-i18n="riesgo-medio">Riesgo medio</td><td>4 – 7</td><td>25%</td></tr>
+            <tr class="riesgo-bajo"><td data-i18n="riesgo-bajo">Riesgo bajo</td><td>8 – 14</td><td>15%</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <form class="simulador" id="form-simulador" novalidate>
+        <label for="precio" data-i18n="sim-precio">Precio original (S/)</label>
+        <input id="precio" type="number" min="0.10" max="9999" step="0.10" value="10.00" inputmode="decimal">
+        <label for="dias"><span data-i18n="sim-dias">Días para vencer</span>: <output id="dias-valor" for="dias">5</output></label>
+        <input id="dias" type="range" min="1" max="15" value="5">
+        <div class="resultado" id="resultado" aria-live="polite">
+          <p class="resultado-nivel" id="resultado-nivel">Riesgo medio</p>
+          <p class="resultado-precio"><span id="resultado-final">S/ 7.50</span> <del id="resultado-original">S/ 10.00</del></p>
+          <p id="resultado-detalle">Con 25% de descuento ahorras S/ 2.50.</p>
+        </div>
+        <noscript><p class="nota">Activa JavaScript para usar el simulador. Las reglas están en la tabla.</p></noscript>
+        <p class="nota" data-i18n="sim-nota">Simulación ilustrativa. En la app, cada bodeguero puede personalizar sus rangos y porcentajes.</p>
+      </form>
+    </div>
+  </section>
+
+  <section id="testimonios" class="seccion">
+    <div class="contenedor">
+      <p class="etiqueta" data-i18n="test-etiqueta">Testimonios</p>
+      <h2 data-i18n="test-titulo">Lo que buscan nuestros usuarios.</h2>
+      <div class="testimonios">
+        <blockquote><p data-i18n="test-1">“Antes tenía que botar la leche que se vencía. Ahora la vendo con descuento antes de que pase.”</p><footer data-i18n="test-1-autor">Bodeguera de Lima Norte</footer></blockquote>
+        <blockquote><p data-i18n="test-2">“Reviso el mapa antes de salir y compro lo mismo, pero más barato, a dos cuadras de mi casa.”</p><footer data-i18n="test-2-autor">Madre de familia</footer></blockquote>
+        <blockquote><p data-i18n="test-3">“No tengo que calcular cada precio. La app aplica el descuento según los días que faltan.”</p><footer data-i18n="test-3-autor">Dueño de minimarket</footer></blockquote>
+      </div>
+      <p class="nota" data-i18n="test-nota">Testimonios ilustrativos, basados en las necesidades identificadas en nuestras entrevistas.</p>
+    </div>
+  </section>
+
+  <!-- PASO 9: preguntas frecuentes con details (abren y cierran sin JavaScript). -->
+  <section id="preguntas" class="seccion fondo">
+    <div class="contenedor faq-contenedor">
+      <p class="etiqueta" data-i18n="faq-etiqueta">Preguntas frecuentes</p>
+      <h2 data-i18n="faq-titulo">Resolvemos tus dudas.</h2>
+      <div class="faq">
+        <details>
+          <summary data-i18n="faq-1-p">¿Cómo se calcula el descuento de un producto?</summary>
+          <p data-i18n="faq-1-r">Según los días que faltan para su vencimiento. Por defecto: de 1 a 3 días, 40%; de 4 a 7 días, 25%; y de 8 a 14 días, 15%. Cada bodeguero puede personalizar estos rangos y porcentajes.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq-2-p">¿Los productos están en buen estado?</summary>
+          <p data-i18n="faq-2-r">Sí. Se publican antes de su fecha de vencimiento, y cada bodeguero es responsable de que estén en buen estado al momento del recojo.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq-3-p">¿Cómo pago mi reserva?</summary>
+          <p data-i18n="faq-3-r">Desde la app, con tarjeta de crédito o débito, Yape o Plin. Al confirmarse el pago recibes un comprobante y un código de recojo.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq-4-p">¿Qué pasa si no recojo mi producto a tiempo?</summary>
+          <p data-i18n="faq-4-r">Como son productos próximos a vencer, si no los recoges dentro del tiempo límite no hay reembolso. Esta política se muestra antes de confirmar el pago, y la app te envía un recordatorio antes de que cierre la bodega.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq-5-p">¿Puedo cancelar una reserva?</summary>
+          <p data-i18n="faq-5-r">Sí, mientras la reserva siga activa y antes de su tiempo de expiración. El producto vuelve a estar disponible para otros compradores.</p>
+        </details>
+        <details>
+          <summary data-i18n="faq-6-p">¿Por qué la app pide mi ubicación?</summary>
+          <p data-i18n="faq-6-r">Para mostrarte las bodegas con ofertas cerca de ti y calcular la ruta. Solo se usa con tu consentimiento, según la Ley N.° 29733 de Protección de Datos Personales.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Llamado final a la acción antes del formulario. -->
+  <section class="cta">
+    <div class="contenedor cta-contenido">
+      <div>
+        <h2 data-i18n="cta-titulo">Menos merma para tu bodega. Más ahorro para tu familia.</h2>
+        <p data-i18n="cta-texto">StockVital llegará pronto a App Store y Google Play. Únete a la lista de espera y sé de los primeros en usarla.</p>
+      </div>
+      <a class="boton boton-blanco" href="#contacto" data-i18n="cta-boton">Quiero unirme</a>
+    </div>
+  </section>
+
+  <!-- PASO 10: formulario con validación HTML5 que lleva a confirmacion.html. -->
+  <section id="contacto" class="seccion contenedor">
+    <div class="dos-columnas">
+      <div>
+        <p class="etiqueta" data-i18n="con-etiqueta">Contacto</p>
+        <h2 data-i18n="con-titulo">Únete a StockVital.</h2>
+        <p data-i18n="con-texto">¿Tienes una bodega y quieres reducir tus mermas? ¿Quieres ahorrar en tu barrio? Déjanos tus datos y te avisaremos cuando la app esté disponible.</p>
+        <p class="nota" data-i18n="con-nota">Prototipo académico: el formulario no guarda ni envía datos reales.</p>
+      </div>
+      <form action="confirmacion.html" method="get" class="formulario">
+        <label for="nombre" data-i18n="f-nombre">Nombre</label>
+        <input id="nombre" type="text" required minlength="2" maxlength="60" placeholder="Ejemplo: Rosa" autocomplete="off" data-i18n-ph="f-nombre-ph">
+        <label for="correo" data-i18n="f-correo">Correo electrónico</label>
+        <input id="correo" type="email" required placeholder="rosa@example.com" autocomplete="off">
+        <label for="perfil" data-i18n="f-perfil">Me interesa como</label>
+        <select id="perfil" required>
+          <option value="" data-i18n="f-perfil-0">Selecciona una opción</option>
+          <option data-i18n="f-perfil-1">Bodeguero</option>
+          <option data-i18n="f-perfil-2">Comprador</option>
+        </select>
+        <label for="mensaje" data-i18n="f-mensaje">Mensaje</label>
+        <textarea id="mensaje" rows="3" required minlength="10" maxlength="300" placeholder="Cuéntanos sobre tu bodega o lo que buscas" data-i18n-ph="f-mensaje-ph"></textarea>
+        <div class="casilla"><input id="acepto" type="checkbox" required> <label for="acepto"><span data-i18n="f-acepto">Acepto los</span> <a href="terminos.html" data-i18n="f-terminos">términos y la política de privacidad</a>.</label></div>
+        <button class="boton" type="submit" data-i18n="f-enviar">Enviar</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- PASO FINAL: pie compartido por las páginas del sitio. -->
+<footer class="pie">
+  <div class="contenedor pie-columnas">
+    <div>
+      <p class="pie-marca"><img src="iconos/logo.svg" alt="" width="32" height="32"> StockVital</p>
+      <p data-i18n="pie-texto">Un producto de BodegaTech. Menos merma, más ahorro.</p>
+    </div>
+    <div>
+      <p class="pie-titulo" data-i18n="pie-enlaces">Enlaces</p>
+      <ul class="pie-lista">
+        <li><a href="terminos.html" data-i18n="pie-terminos">Términos y condiciones</a></li>
+        <li><a href="terminos.html#privacidad" data-i18n="pie-privacidad">Política de privacidad</a></li>
+        <li><a href="index.html#contacto" data-i18n="menu-contacto">Contacto</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="pie-titulo" data-i18n="pie-redes">Síguenos</p>
+      <nav class="redes" aria-label="Redes sociales">
+        <!-- Páginas generales; reemplazar por las cuentas del proyecto. -->
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/facebook.svg" alt="" width="22" height="22">Facebook</a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/instagram.svg" alt="" width="22" height="22">Instagram</a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer"><img src="iconos/youtube.svg" alt="" width="22" height="22">YouTube</a>
+      </nav>
+    </div>
+  </div>
+  <p class="contenedor pie-copy" data-i18n="pie-copy">© 2026 BodegaTech · Proyecto académico del curso Diseño y Patrones de Software (UPC).</p>
+</footer>
+
+<script src="js/idioma.js"></script>
+<script src="js/simulador.js"></script>
+<script src="js/animaciones.js"></script>
+</body>
+</html>
