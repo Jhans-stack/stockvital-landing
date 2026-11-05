@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 420" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Mapa ilustrado de Lima con un punto de ubicación">
+<rect width="520" height="420" fill="#eaf4ee"/>
+<path d="M0 300C90 270 150 330 250 300S430 250 520 290V420H0z" fill="#cfe7f2"/>
+<g fill="#d9ebdf"><rect x="30" y="30" width="110" height="80" rx="10"/><rect x="170" y="50" width="90" height="70" rx="10"/><rect x="300" y="24" width="120" height="86" rx="10"/><rect x="60" y="150" width="100" height="70" rx="10"/><rect x="200" y="160" width="130" height="60" rx="10"/><rect x="370" y="150" width="120" height="80" rx="10"/></g>
+<g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M0 125H520"/><path d="M160 0V280"/><path d="M350 0V270"/><path d="M0 240L520 200"/></g>
+<g stroke="#f7d9a8" stroke-width="6" fill="none"><path d="M0 125H520"/><path d="M350 0V270"/></g>
+<circle cx="260" cy="180" r="62" fill="#0f9c57" opacity=".15"/>
+<path d="M260 214c-22-34-38-52-38-76a38 38 0 0 1 76 0c0 24-16 42-38 76z" fill="#0f9c57"/><circle cx="260" cy="138" r="14" fill="#fff"/>
+<g fill="#e5660a"><circle cx="110" cy="190" r="9"/><circle cx="420" cy="120" r="9"/><circle cx="90" cy="70" r="9"/></g>
+</svg>

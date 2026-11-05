@@ -14,14 +14,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   /* ---------- 1. Aparecer al hacer scroll ---------- */
   const grupos = [
+    '.encabezado',
+    '.cuadricula .tarjeta',
+    '.objetivo-general',
+    '.dato',
     '.tarjetas-mision .tarjeta',
     '.beneficios li',
     '.pantallas .telefono',
-    '.pasos li',
     '.reglas',
     '.simulador',
+    '.mapa',
     '.faq details',
-    '.testimonios blockquote',
     '.formulario'
   ];
 

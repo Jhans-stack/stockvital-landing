@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img" aria-label="Equipo de estudiantes trabajando con laptops">
+<rect width="520" height="300" rx="28" fill="#e8f7ef"/>
+<rect x="40" y="226" width="440" height="14" rx="7" fill="#b9dfca"/>
+<g><rect x="80" y="140" width="150" height="86" rx="8" fill="#1f2a37"/><rect x="88" y="148" width="134" height="70" rx="4" fill="#fff"/><rect x="98" y="160" width="60" height="8" rx="4" fill="#0f9c57"/><rect x="98" y="176" width="100" height="6" rx="3" fill="#dfe6ec"/><rect x="98" y="190" width="80" height="6" rx="3" fill="#dfe6ec"/><rect x="64" y="226" width="182" height="8" rx="4" fill="#4b5666"/></g>
+<g><rect x="290" y="140" width="150" height="86" rx="8" fill="#1f2a37"/><rect x="298" y="148" width="134" height="70" rx="4" fill="#fff3e8"/><rect x="308" y="158" width="40" height="40" rx="6" fill="#e5660a"/><rect x="358" y="160" width="62" height="8" rx="4" fill="#e5660a"/><rect x="358" y="176" width="50" height="6" rx="3" fill="#fdba74"/><rect x="274" y="226" width="182" height="8" rx="4" fill="#4b5666"/></g>
+<g><circle cx="155" cy="86" r="26" fill="#f2c9a5"/><path d="M129 80a26 26 0 0 1 52 0c-10-8-40-8-52 0z" fill="#1f2a37"/><path d="M118 140c0-24 16-34 37-34s37 10 37 34z" fill="#0f9c57"/></g>
+<g><circle cx="365" cy="86" r="26" fill="#e7b48b"/><path d="M339 84c0-16 12-24 26-24s26 8 26 24c-8-6-44-6-52 0z" fill="#3b2a20"/><path d="M328 140c0-24 16-34 37-34s37 10 37 34z" fill="#e5660a"/></g>
+<g transform="translate(240 40)"><rect width="40" height="44" rx="8" fill="#fff" stroke="#0f9c57" stroke-width="3"/><path d="M10 24l8 8 14-16" fill="none" stroke="#0f9c57" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>
